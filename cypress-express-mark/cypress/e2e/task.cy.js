@@ -29,5 +29,3 @@ describe('Tasks', () => {
       .should('have.text', 'Task already exists!')
   })
 })
-
-teste1
