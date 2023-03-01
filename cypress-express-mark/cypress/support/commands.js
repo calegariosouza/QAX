@@ -1,9 +1,11 @@
-Cypress.Commands.add('createTask', (taskName) => {
+Cypress.Commands.add('createTask', (taskName = '') => {
 
     cy.visit('http://localhost:8080')
-  
-    cy.get('input[placeholder="Add a new Task"]')
-      .type('Ler um livro de node.js')
+
+    if (taskName !== '') {
+      cy.get('input[placeholder="Add a new Task"]')
+        .type(taskName)
+    }
   
     cy.contains('button', 'Create').click()
   })

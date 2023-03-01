@@ -28,4 +28,8 @@ describe('Tasks', () => {
       .should('be.visible')
       .should('have.text', 'Task already exists!')
   })
+
+  it('Campo Obrigatório', () => {
+    cy.createTask()
+  });
 })
